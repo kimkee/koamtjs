@@ -3,30 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title></title>
-
+<title>koamtjs</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-<style>
-body{ background:#000; color:#CCC ;  box-sizing:border-box; margin:0; padding:0px;}
-h1,h2,h3,h4,h5,h6{ margin:0; padding:0;}
-ul,ol,li{ list-style:none; margin:0px; padding:0px;}
-.wrap{ padding:20px;}
-.koamtjs{ }
-.koamtjs .koamtjs-t{}
-.koamtjs .koamtjs-e{ margin-right:5px; color:#888888; font-size:60%; white-space:nowrap;}
-.koamtjs .koamtjs-e:last-child{ margin-right:0px;}
-.koamtjs .koamtjs-e sup{ font-size:50%;}
-code{ font-family:'Consolas';  word-wrap:break-word; }
-ul.demo{ max-width:450px; box-sizing:border-box;}
-ul.demo>li{ margin:5px 0;border:#484848 solid 1px; border-radius:10px; padding:10px 15px 12px; text-align:right; word-wrap:break-word;  background-image: linear-gradient(to bottom, #303030, #242424); box-shadow:inset #000 0px 0px 3px;}
-ul.demo>li h4{ color:#666666; font-size:18px; font-weight:normal; word-wrap:break-word; color:#CCC; text-shadow:#000  -1px -1px 0px; font-size:20px;}
-ul.demo>li h4 span{ word-wrap:break-word; white-space:normal;}
-button{ border:#CCC solid 1px; border-radius:5px; background:#FFF; padding:10px;}
-button:hover{ background:#ededed}
-</style>
+<script src="koamtjs.js"></script>
 </head>
 <body>
 <div class="wrap">
+	<h1>koamtjs</h1>
 	<ul class="demo">
 		<li><h4 class="selecter">7894561648932010131065856012065488101230156456015148910005606078945612300210024</h4></li>
 		<li><h4 ><span class="selecter">7456001289900146401000178940024</span></h4></li>
@@ -41,70 +25,7 @@ button:hover{ background:#ededed}
 	<p>단위 : <code>d = ["","만","억","조","경","해","자","양","구","간","정","재","극","항하사","아승기","나유타","불가사의","무량대수"];</code></p>
 	<p>적용 : <code>$(".selecter").koamtjs(); </code></p>
 	<p>복구 : <code>$(".selecter").koamtjs("restore");</code></p>
+	<p>Kimkee7@gmail.com</p>
 </div>
-
-<script>
-// https://ko.wikipedia.org/wiki/대수의_이름
-(function($){
-	"use strict";
-	var d , s , l , t , out , e , orgnum ,i;
-	var pluginNS = "koamtjs" ;
-	d = ["","만","억","조","경","해","자","양","구","간","정","재","극","항하사","아승기","나유타","불가사의","무량대수"];
-	$.fn[pluginNS] = function(option){
-		if(option=="restore"){
-			return this.each(function(){
-				orgnum = $(this).attr("data-"+pluginNS);
-				if( orgnum ){
-					$(this).html(orgnum).attr("data-"+pluginNS,"").removeClass(pluginNS);
-				}
-			});
-		}else{
-			return this.each(function(){
-				if( !$(this).attr("data-"+pluginNS) ){
-					s = this.outerText;
-					$(this).attr("data-"+pluginNS,s).addClass(pluginNS);
-					if(s==="0"){
-						out = '<span class="'+pluginNS+'-t">'+ s ;
-					}else{
-						s = s.replace(/\D/g,"");
-						l = s.length-4;
-						while(l > 0) {
-							s = s.substr(0,l) + "," + s.substr(l);
-							l -= 4;
-						};
-						s = s.split(",");
-						//console.log(s , s[0] , s[1] , s.length , d.length);
-						out = '';
-						for(i=1 ; i<=s.length ; i++){
-							//console.log(  s[s.length-i] + d[i-1]  );
-							t = parseInt( s[s.length-i] ,10);
-							e = d[i-1];
-							if( e !== undefined){
-								e = '<span class="'+pluginNS+'-e">'+ e +'</span>';
-							}else{
-								e = '<span class="'+pluginNS+'-e">10<sup>'+(i-1)*4+'</sup></span>';
-							}
-							if( t!==0 ){
-								if($(e).text()==''){
-									e='';
-								}
-								out = '<span class="'+pluginNS+'-t">'+ t +'</span>' + e + out ;
-							}
-						}
-						//console.log(out);
-						//this.innerHtml = k; 
-					}
-					$(this).html(out);
-				}
-			});
-		}
-	};
-})(jQuery);
-
-
-
-
-
-</script>
 </body>
 </html>
