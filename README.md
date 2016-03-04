@@ -10,10 +10,10 @@ d = ["","만","억","조","경","해","자","양","구","간","정","재","극",
 
 ### 변환
 ```html
-	$(".selecter").koamtjs();
+$(".selecter").koamtjs();
 ```
 
 ### 복원
 ```html
-	$(".selecter").koamtjs("restore");
+$(".selecter").koamtjs("restore");
 ```
