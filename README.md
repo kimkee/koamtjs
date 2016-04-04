@@ -4,19 +4,16 @@
 
 
 ### 단위
-```js
+```html
 d = ["","만","억","조","경","해","자","양","구","간","정","재","극","항하사","아승기","나유타","불가사의","무량대수"];
 ```
 
 ### 변환
-```js
+```html
 $(".selecter").koamtjs();
 ```
 
 ### 복원
-```js
+```html
 $(".selecter").koamtjs("restore");
 ```
-
-
-http://kimkee.github.io/koamtjs/
