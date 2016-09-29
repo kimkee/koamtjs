@@ -8,6 +8,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="koamtjs.js"></script>
+    
   </head>
   <body>
     <section class="page-header">
@@ -19,6 +23,25 @@
     </section>
 
     <section class="main-content">
+      
+      <ul class="demo">
+        <li><h4 class="selecter">7894561648932010131065856012065488101230156456015148910005606078945612300210024</h4></li>
+        <li><h4 ><span class="selecter">7456001289900146401000178940024</span></h4></li>
+        <li><h4 class="selecter">4,064,002,019,123</h4></li>
+        <li><h4 class="selecter">1,000,000,001,000,000</h4></li>
+        <li><h4 class="selecter">1234560001234560000</h4></li>
+        <li><h4 class="selecter">0</h4></li>
+        <li><h4 class="selecter">1</h4></li>
+      </ul>
+      <button onClick='$(".selecter").koamtjs();'>적용</button>
+      <button onClick='$(".selecter").koamtjs("restore");'>복구</button>
+      <p>단위 : <code>d = ["","만","억","조","경","해","자","양","구","간","정","재","극","항하사","아승기","나유타","불가사의","무량대수"];</code></p>
+      <p>적용 : <code>$(".selecter").koamtjs(); </code></p>
+      <p>복구 : <code>$(".selecter").koamtjs("restore");</code></p>
+      <p>Kimkee7@gmail.com</p>
+      
+      
+      
       <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
