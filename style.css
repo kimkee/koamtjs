@@ -8,7 +8,7 @@ ul,ol,li{ list-style:none; margin:0px; padding:0px;}
 .koamtjs .koamtjs-e:last-child{ margin-right:0px;}
 .koamtjs .koamtjs-e sup{ font-size:50%;}
 code{ font-family:'Consolas';  word-wrap:break-word; }
-ul.demo{ max-width:450px; box-sizing:border-box;}
+ul.demo{box-sizing:border-box;}
 ul.demo>li{ margin:5px 0;border:#484848 solid 1px; border-radius:10px; padding:10px 15px 12px; text-align:right; word-wrap:break-word;  background-image: linear-gradient(to bottom, #303030, #242424); box-shadow:inset #000 0px 0px 3px;}
 ul.demo>li h4{ color:#666666; font-size:18px; font-weight:normal; word-wrap:break-word; color:#CCC; text-shadow:#000  -1px -1px 0px; font-size:20px;}
 ul.demo>li h4 span{ word-wrap:break-word; white-space:normal;}
