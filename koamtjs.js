@@ -1,4 +1,4 @@
-// https://ko.wikipedia.org/wiki/대수의_이름
+// https://ko.wikipedia.org/wiki/대수의_이름 참조
 (function($){
 	"use strict";
 	var d , s , l , t , out , e , orgnum ,i;
